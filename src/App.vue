@@ -1,11 +1,15 @@
 <template>
   <div id="app">
+      <h5 class="header">
+         <my-header @ievent="ievent" event="complete" class="my-header my-header-left"></my-header>
+         <my-header @ievent="ievent" event="cancel" class=" my-header my-header-middle"></my-header>
+         <my-header @ievent="ievent" event="goback" class=" my-header my-header-right"></my-header>
+      </h5>
       <router-view keep-alive transition="fade" transition-mode='out-in'  linkActiveClass></router-view>
   </div>
 </template>
-
 <script>
-import banner from './components/Banner.vue';
+import header from './components/Header.vue';
 export default {
   name: 'app',
   data () {
@@ -14,7 +18,12 @@ export default {
     }
 },
 components:{
-    'my-banner':banner
+    'my-header':header
+},
+methods:{
+    ievent(type){
+            console.log(type);
+    }
 }
 }
 </script>
@@ -35,6 +44,21 @@ components:{
   color: #2c3e50;
   box-sizing: border-box;
   padding: 0;
+}
+.header{
+    padding: 10px 10px;
+}
+.my-header{
+    display: inline-block;
+}
+.my-header-right{
+    float: left;
+}
+.my-header-left{
+    float: right;
+}
+.my-header-middle{
+    padding:0px 76px;
 }
 .banner{
   height:13rem;
