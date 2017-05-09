@@ -20,8 +20,8 @@ export default [{
         name: 'details',
         component: Details
     }
-    // ,{
-    //     path: '/',
-    //     redirect: '/home'
-    // }
+    ,{
+        path: '/',
+        redirect: '/home'
+    }
 ]

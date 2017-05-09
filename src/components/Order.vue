@@ -1,7 +1,7 @@
 <template class="Order">
  <div>
      <div>
-         <h5 class="title"><a href="javascript:void(0);">sass样式</a></h5>
+         <h5 class="title"><a href="javascript:void(0);">sass</a></h5>
      </div>
      <div class="wrapper">
      <div class="lg-left-menu">
