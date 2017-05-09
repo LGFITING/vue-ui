@@ -1,7 +1,6 @@
 <template class="Header">
     <div>
     <div @click="eventType" v-model="event">{{event}}</div>
-    <!-- <div @click="complete">测试</div> -->
     </div>
 
 </template>

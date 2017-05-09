@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-      <h5 class="header">
+      <!-- <div class="header">
          <my-header @ievent="ievent" event="complete" class="my-header my-header-left"></my-header>
-         <my-header @ievent="ievent" event="cancel" class=" my-header my-header-middle"></my-header>
+         <my-header @ievent="ievent" event="title" class=" my-header my-header-middle"></my-header>
          <my-header @ievent="ievent" event="goback" class=" my-header my-header-right"></my-header>
-      </h5>
+     </div> -->
       <router-view keep-alive transition="fade" transition-mode='out-in'  linkActiveClass></router-view>
   </div>
 </template>
