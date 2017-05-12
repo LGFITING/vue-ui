@@ -1,7 +1,7 @@
 <template class="Order">
  <div>
      <div>
-         <h5 class="title"><a href="javascript:void(0);">sass</a></h5>
+         <h4 class="title"><a href="javascript:void(0);">列表页</a></h4>
      </div>
      <div class="wrapper">
      <div class="lg-left-menu">
@@ -82,8 +82,9 @@ $border:1px solid #46C95E;
     }
 };
 .title{
+    background: #46C95E;
     a{
-        color: #46C95E;
+        color: #2c3e50;
          &:hover{
             color:#000;
         }
