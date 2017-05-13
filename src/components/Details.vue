@@ -7,14 +7,20 @@
     <div class="res">
         <img :src="imgUrl" alt="图片">
     </div>
-
+    <mt-navbar v-model="selected">
+   <mt-tab-item id="1">基本信息</mt-tab-item>
+   <mt-tab-item id="2">商品详情</mt-tab-item>
+   <mt-tab-item id="3">评价1990</mt-tab-item>
+ </mt-navbar>
 </div>
 </template>
 <script type="text/javascript">
+import { Navbar, TabItem } from 'mint-ui';
     export default{
         data(){
             return{
-                imgUrl:''
+                imgUrl:'',
+                selected:'1'
             }
         },
         created(){
@@ -54,5 +60,9 @@ body{
         margin:0 auto;
         width: 98%;
     }
+}
+.mint-navbar .mint-tab-item.is-selected{
+  border-bottom: 3px solid #46C95E;
+  color: #46C95E;
 }
 </style>
