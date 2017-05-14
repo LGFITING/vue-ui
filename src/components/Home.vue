@@ -5,13 +5,13 @@
   <div class="menu">
   <mt-tabbar v-model="active" fixed>
     <mt-tab-item id="home">
-      <router-link to="/home">home</router-link>
+      <router-link to="/home">首页</router-link>
     </mt-tab-item>
     <mt-tab-item id="orders">
-      <router-link to="/order">orders</router-link>
+      <router-link to="/order">分类</router-link>
     </mt-tab-item>
     <mt-tab-item id="personal">
-        <router-link to="/personal">personal</router-link>
+        <router-link to="/personal">个人中心</router-link>
     </mt-tab-item>
   </mt-tabbar>
   </div>

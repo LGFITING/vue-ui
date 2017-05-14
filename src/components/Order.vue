@@ -1,7 +1,7 @@
 <template class="Order">
  <div>
      <div>
-         <h4 class="title"><a href="javascript:void(0);">列表页</a></h4>
+         <h4 class="title"><a href="javascript:void(0);">分类</a></h4>
      </div>
      <div class="wrapper">
      <div class="lg-left-menu">
@@ -24,13 +24,13 @@
    <mt-spinner type="snake" color="#26a2ff" class="loading" :size="40" v-show="loading"></mt-spinner>
    <mt-tabbar  v-model="active">
      <mt-tab-item id="home">
-       <router-link to="/home">home</router-link>
+       <router-link to="/home">首页</router-link>
      </mt-tab-item>
      <mt-tab-item id="orders">
-       <router-link to="/order">orders</router-link>
+       <router-link to="/order">分类</router-link>
      </mt-tab-item>
      <mt-tab-item id="personal">
-         <router-link to="/personal">personal</router-link>
+         <router-link to="/personal">个人中心</router-link>
      </mt-tab-item>
    </mt-tabbar>
  </div>

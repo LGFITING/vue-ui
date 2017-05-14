@@ -96,4 +96,7 @@ footer{
   left: 50%;
   transform: translate(-50%,-50%);
 }
+.mint-tab-item-label{
+  padding:8px;
+}
 </style>

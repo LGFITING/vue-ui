@@ -1,6 +1,9 @@
 <template class="Details">
 <div class="wrapper">
     <h4 class="header">
+        详情页
+    </h4>
+    <h4 class="header header-fixed">
         <span @click="goBack">〈</span>
         详情页
     </h4>
@@ -49,17 +52,54 @@
    <mt-tab-container v-model="selected" swipeable>
      <mt-tab-container-item id="1">
       <div class="good-msg">
-          基本信息
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
+          基本信息</br>
       </div>
      </mt-tab-container-item>
      <mt-tab-container-item id="2">
        <div class="good-msg">
-           商品详情
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
+           商品详情</br>
        </div>
      </mt-tab-container-item>
      <mt-tab-container-item id="3">
        <div class="good-msg">
-           评价列表
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
+           评价列表</br>
        </div>
      </mt-tab-container-item>
    </mt-tab-container>
@@ -128,7 +168,7 @@ body{
 .wrapper{
   background: #C1C1C1;
 }
-.header{
+.header {
     text-align:center;
     background: #46C95E;
     span{
@@ -137,6 +177,13 @@ body{
         position: absolute;
     }
 }
+
+.header-fixed{
+  position: fixed;
+  width: 100%;
+  top:0px;
+}
+
 .res{
     width: 100%;
     height:auto;
@@ -185,12 +232,11 @@ body{
 }
 .commit {
   display: flex;
-  margin: 6px;
   p {
     flex:1;
     font-size:12px;
     font-weight:700;
-    padding:6px;
+    padding:6px 0px;
     }
     p:last-child,p:first-child {
       button{
@@ -198,11 +244,10 @@ body{
         color:#fff;
         background: #BE0000;
         width: 100%;
-        border: none;
+        border: 1px solid #BE0000;
         padding:8px;
       }
     }
-
     p:first-child {
       button{
         box-sizing: border-box;
@@ -211,31 +256,27 @@ body{
         border: 1px solid #D0D0D0;
       }
     }
-
     .number {
       text-align: center;
-      padding-top:9px;
-    }
+      margin-top:0px;
     span {
       border: 1px solid #D0D0D0;
       text-align: center;
-      padding:4px;
-      height: 20px;
-      line-height: 24px;
+      font-size:14px;
+      padding:8px 10px;
     }
     input {
       width: 30px;
       text-align: center;
-      height: 24px;
-      line-height: 20px;
-      display: inline-block;
+      font-size:14px;
+      padding:8px 0px;
       border: none;
       border:{
         top:1px solid #D0D0D0;
         bottom:1px solid #D0D0D0;;
-
       }
     }
+}
 }
 .isActive {
   background: #C1C1C1;
