@@ -34,6 +34,9 @@ methods:{
   padding: 0;
   box-sizing: border-box;
 }
+html{
+  font-family: "Microsoft YaHei";
+}
 .router-link-active{
   color: #4A8AF4;
 }
