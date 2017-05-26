@@ -135,10 +135,13 @@ html{
   background: #46C95E;
   color:#fff;
 }
-
+.wrapper{
+    height: 100%;
+}
 .lg-left-menu{
     border:1px solid $border-color;
     display: inline-block;
+    position: fixed;
     border:{
         left:none;
         bottom:none;
@@ -166,10 +169,11 @@ html{
     margin-top:10px;
     border: $border;
     display: inline-block;
+    position: fixed;
     width: 67.7%;
     overflow: scroll;
-
-    float: right;
+    height: 82%;
+    right: 0px;
     ul{
         li{
             list-style: none;
@@ -182,7 +186,7 @@ html{
         }
     }
 }
-@media screen and (max-height: 568px) {
+/*@media screen and (max-height: 568px) {
   .lg-show-right{
         max-height: 480px;
   }
@@ -198,5 +202,5 @@ html{
   .lg-show-right{
         max-height: 650px;
   }
-}
+}*/
 </style>
