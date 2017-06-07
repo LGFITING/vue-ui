@@ -4,8 +4,8 @@ import VueRouter from 'vue-router';
 import Mint from 'mint-ui';
 import VueLazyload from 'vue-lazyload';
 import 'mint-ui/lib/style.css'
-import routes from './router.js'
-
+import routes from './router/router.js'
+import store from './store/index'
 Vue.use(Mint)
 Vue.use(VueRouter)
 Vue.use(VueLazyload, {
@@ -23,5 +23,6 @@ const router = new VueRouter({
 new Vue({
   el: '#app',
   router,
+  store,
   render: h => h(App)
 })

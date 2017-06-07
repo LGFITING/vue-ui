@@ -16,3 +16,5 @@ npm run build
 ```
 
 For detailed explanation on how things work, consult the [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+vuex:http://www.cnblogs.com/web-Rain/p/6495364.html
