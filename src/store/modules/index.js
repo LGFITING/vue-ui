@@ -1,3 +1,4 @@
+import inActions from '../actions'
 const state = {
   count:0
 }
@@ -8,12 +9,7 @@ const mutations = {
   }
 }
 
-const actions = {
-  addCount ({ commit }) {
-  commit('addCount')
-  }
-}
-
+const actions = inActions.actions;
 const listData = {
   state,
   mutations,
