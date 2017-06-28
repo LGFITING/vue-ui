@@ -1,9 +1,11 @@
 <template class="Home">
   <div id="">
   <mt-spinner type="snake" color="#26a2ff" class="loading" :size="40" v-show="loading"></mt-spinner>
-  <my-banner></my-banner>
+  <!-- <my-banner></my-banner> -->
   <div class="menu">
-  <mt-tabbar v-model="active" fixed>
+    <p>{{ getResult }}</p>
+    <button type="button" name="button" @click="addCount">点击加1</button>
+  <!-- <mt-tabbar v-model="active" fixed>
     <mt-tab-item id="home">
       <router-link to="/home">首页</router-link>
     </mt-tab-item>
@@ -13,27 +15,41 @@
     <mt-tab-item id="personal">
         <router-link to="/personal">个人中心</router-link>
     </mt-tab-item>
-  </mt-tabbar>
+  </mt-tabbar> -->
   </div>
 </div>
 </template>
 <script type="text/javascript">
  import banner from './Banner.vue';
+ import { mapGetters,mapActions } from 'vuex'
   export default{
     name: 'hello',
     data(){
       return{
         active:'home',
-        loading:false
+        loading:false,
+        checked:'',
       }
+    },
+    computed: {
+      ...mapGetters({
+        getResult:'getCount'
+      })
     },
     components:{
     'my-banner':banner
     },
     beforeCreate(){
-        console.log('渲染前');
         let vm = this;
         vm.loading = true;
+    },
+    mounted(){
+
+    },
+    methods:{
+      ...mapActions([
+        'addCount'
+      ])
     }
   }
 </script>

@@ -5,7 +5,7 @@ import Mint from 'mint-ui';
 import VueLazyload from 'vue-lazyload';
 import 'mint-ui/lib/style.css'
 import routes from './router/router.js'
-import store from './store/index'
+import store from './store'
 Vue.use(Mint)
 Vue.use(VueRouter)
 Vue.use(VueLazyload, {
