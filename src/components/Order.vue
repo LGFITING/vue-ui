@@ -6,7 +6,7 @@
      <div class="wrapper">
      <div class="lg-left-menu">
          <ul>
-             <li v-for="(item,index) in items" @click="currentPage(index)" :class="{ 'isActive': isActive===index }">
+             <li v-for="(item,index) in getMenu" @click="currentPage(index)" :class="{ 'isActive': isActive===index }">
              <span>{{item}}</span>
              </li>
          </ul>
@@ -37,6 +37,7 @@
 </template>
 
 <script type="text/javascript">
+import { mapGetters } from 'vuex'
   export default
   {
     data(){
@@ -44,7 +45,7 @@
         loading:false,
         active:'orders',
         isActive:'',
-        items:['粤菜','川菜','火锅','海鲜','小吃','外卖'],
+        // items:['粤菜','川菜','火锅','海鲜','小吃','外卖'],
         pics:[
             {from:'https://ss2.bdstatic.com/70cFvnSh_Q1YnxGkpoWK1HF6hhy/it/u=2965628390,441666516&fm=117&gp=0.jpg',state:true,id:0},
             {from:'https://ss0.baidu.com/73F1bjeh1BF3odCf/it/u=1382096677,1831266580&fm=73',state:false,id:1},
@@ -83,6 +84,11 @@
           ]
         },
       }
+    },
+    computed: {
+      ...mapGetters({
+        getMenu:'getMenu'
+      })
     },
     created(){
       this.isActive = 0;
@@ -186,21 +192,4 @@ html{
         }
     }
 }
-/*@media screen and (max-height: 568px) {
-  .lg-show-right{
-        max-height: 480px;
-  }
-}
-
-@media screen and(min-height:569px) and (max-height:735px){
-  .lg-show-right{
-        max-height: 580px;
-  }
-}
-
-@media screen and(min-height:736px) and (max-height:1024px){
-  .lg-show-right{
-        max-height: 650px;
-  }
-}*/
 </style>

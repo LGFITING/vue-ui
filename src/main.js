@@ -17,6 +17,7 @@ Vue.use(VueLazyload, {
 });
 
 const router = new VueRouter({
+  mode:'history',
     routes
 })
 
