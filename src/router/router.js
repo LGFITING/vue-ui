@@ -4,6 +4,7 @@ import Personal from '../components/Personal.vue';
 import Lazyload from '../components/Lazyload.vue';
 import Details from '../components/Details.vue';
 import Navigation from '../components/Navigation.vue';
+import Container from '../components/emit/Container.vue'
 export default [{
         path: '/home',
         component: Home
@@ -16,6 +17,9 @@ export default [{
     },{
         path: '/personal',
         component: Personal
+    },{
+        path: '/container',
+        component: Container
     },{
         path: '/navigation',
         component:Navigation
