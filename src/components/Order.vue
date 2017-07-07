@@ -6,16 +6,16 @@
      <div class="wrapper">
      <div class="lg-left-menu">
          <ul>
-             <li v-for="(item,index) in getMenu" @click="currentPage(index)" :class="{ 'isActive': isActive===index }">
+             <li v-for="(item,index) in getMenu" @click="currentPage(index)" :class="{ 'isActive': isActive===index }" :key="item.id">
              <span>{{item}}</span>
              </li>
          </ul>
      </div>
      <div class="lg-show-right">
          <ul>
-             <li v-for="pic in pics" v-show="pic.state">
+             <li v-for="pic in pics" v-show="pic.state"  :key="pic.id">
                  <router-link :to="{ name: 'details', params: { detailsId: pic.from }}">
-                    <img :src="pic.from" alt="" v-for="n in 16">
+                    <img :src="pic.from" alt="" v-for="n in 16"  :key="n.id">
                 </router-link>
              </li>
          </ul>

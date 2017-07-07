@@ -27,7 +27,7 @@
   <h3 @click="changeArray">点击改变数组元素视图更新$set</h3>
   <div class="">
     <ul>
-      <li v-for="(item,index) in setArray" :key="item.id" @click="currentId(index)" ref="getRef">{{index}}&nbsp;&nbsp;{{item}}</li>
+      <li v-for="(item,index) in setArray" :key="item.id" @click="currentId(index)" ref="getRef"  :class="{ 'cActive': classActive===index }" >{{index}}&nbsp;&nbsp;{{item}}</li>
     </ul>
   </div>
 </div>
@@ -46,7 +46,8 @@
         firstName: 'L',
         lastName: 'G',
         fullName:'',
-        setArray:[1,2,3]
+        setArray:[1,2,3],
+        classActive:false
       }
     },
     computed: {
@@ -95,7 +96,9 @@
       currentId(index) {
         //用$ref可获取dom节点
          console.log(this.$refs.getRef[index].innerHTML)
+        //  this.$refs.getRef[index].style.background="black"
          alert(index)
+         this.classActive = index;
       }
     }
   }
@@ -110,7 +113,8 @@
 }
 .Goods img{
     width: 60%;
-    display: table-cell; //主要是这个属性
+    /*主要是这个属性*/
+    display: table-cell; 
     vertical-align: middle;
     text-align: center;
     margin: auto;
@@ -119,5 +123,7 @@ li:hover{
   background: gray;
   cursor: pointer;
 }
-
+.cActive{
+  background:black;
+}
 </style>
